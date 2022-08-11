@@ -1,0 +1,19 @@
+{
+  "name": "p3-oriane",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./SASS/main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTOriane/P3_Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LTOriane/P3_Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/LTOriane/P3_Ohmyfood#readme"
+}
