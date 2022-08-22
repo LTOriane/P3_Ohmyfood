@@ -1,6 +1,245 @@
 @import "variable";
 
+/* G
+background-color: $tertiary-color;ENERAL SETTINGS*/
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+li,
+button,
+input,
+    {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+
+h2 {
+    font-size: 130%;
+}
+
+h3,
+h4,
+p,
+input,
+a {
+    font-size: 100%;
+}
+
+h4 {
+    font-family: 'Shrikhand', cursive;
+    padding: 15px 15px;
+}
+
+p {
+    font-weight: 300;
+}
+
+input {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
-    color: $primary_color;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+footer i {
+    width: 25px;
+    padding: 0px 5px 0px 0px;
+}
+
+.howto,
+.restaurant,
+.header__explore {
+    padding: 50px 20px;
+}
+
+button {
+    box-shadow: $shadow;
+    font-size: 90%;
+    border-radius: $border_round;
+    border: none;
+}
+
+/*HEADER*/
+
+.header {
+
+    &__logo {
+        padding: 15px 0px;
+
+        & img {
+            max-width: 55%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__location {
+        padding: 20px;
+        background-color: adjust-color($grey_color, $lightness: 65%, );
+        display: flex;
+        justify-content: center;
+        box-shadow: inset 0 6px 4px -4px adjust-color($grey_color, $lightness: 50%, );
+
+        & input {
+            border: none;
+            background-color: adjust-color($grey_color, $lightness: 65%, );
+        }
+    }
+
+    &__explore {
+        background-color: adjust-color($grey_color, $lightness: 75%, );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+
+        &--button {
+            padding: 15px;
+            color: white;
+            background: linear-gradient(to bottom right, $secondary_color, 50%, $primary_color);
+
+        }
+    }
+}
+
+/*MAIN*/
+
+.howto {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        padding: 23px 0px;
+        gap: 25px;
+        background-color: adjust-color($grey_color, $lightness: 75%, );
+        margin-left: 13px;
+
+        & i {
+            color: adjust-color($grey_color, $lightness: 20%, );
+        }
+
+        &--number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary_color;
+            width: 25px;
+            height: 25px;
+            border-radius: $border_round;
+            color: white;
+            margin: -12px;
+        }
+
+        &--text {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+        }
+    }
+}
+
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: adjust-color($grey_color, $lightness: 75%, );
+
+    &__card {
+        background-color: $background_card;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: $border_card;
+        box-shadow: $shadow;
+        position: relative;
+
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            border-top-left-radius: $border_card;
+            border-top-right-radius: $border_card;
+        }
+
+        &--new {
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, $amount: 40);
+            border-radius: 0;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 5px 10px;
+        }
+
+        &--body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10px;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            &-icon {
+                font-size: x-large;
+            }
+        }
+
+    }
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: $grey_color;
+    color: white;
+    font-size: medium;
+    padding: 20px 10px;
+
+    & a {
+        color: white;
+        padding: 5px 10px;
+    }
 }
