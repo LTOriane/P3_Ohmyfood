@@ -1,0 +1,88 @@
+/* GENERAL SETTINGS*/
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+li,
+button,
+input {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+
+h2 {
+    font-size: 130%;
+}
+
+h3,
+h4,
+p,
+input,
+a {
+    font-size: 100%;
+}
+
+h4 {
+    font-family: 'Shrikhand', cursive;
+    padding: 15px 15px;
+}
+
+p {
+    font-weight: 300;
+}
+
+input {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+footer i {
+    width: 25px;
+    padding: 0px 5px 0px 0px;
+}
+
+.howto,
+.restaurants,
+.header__explore {
+    padding: 50px 20px;
+}
+
+button {
+    box-shadow: $shadow;
+    font-size: 90%;
+    border-radius: $border_round;
+    border: none;
+}
