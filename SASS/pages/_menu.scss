@@ -1,5 +1,5 @@
 .background img {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     position: absolute;
 }
@@ -32,12 +32,12 @@
         font-size: 80%;
         padding: 20px 0px 5px 0px;
         border-bottom: 3px $tertiary_color solid;
+        width: 45px;
 
         & h2 {
             font-weight: 200;
         }
     }
-
 
     &__details {
         padding: 15px 0px 15px 0px;
@@ -84,4 +84,23 @@
 .footer__menu {
     position: relative;
     top: 200px;
+}
+
+/*MEDIA QUERIES FULL SCREEN*/
+
+@media screen and (min-width: 1000px) {
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            gap: 30px;
+        }
+
+        &__details {
+            min-width: 500px;
+        }
+    }
 }
