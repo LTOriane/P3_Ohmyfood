@@ -90,6 +90,34 @@
         box-shadow: $shadow;
         position: relative;
 
+        &--new {
+            background-color: $background_card;
+            min-width: 200px;
+            min-height: 200px;
+            border-radius: $border_card;
+            box-shadow: $shadow;
+            position: relative;
+
+            &::before {
+                content: "Nouveau";
+                background-color: $tertiary-color;
+                color: darken($tertiary-color, $amount: 40);
+                border-radius: 2px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                padding: 5px 10px;
+            }
+
+
+            & img {
+                max-width: 100%;
+                max-height: 80%;
+                object-fit: cover;
+                border-top-left-radius: $border_card;
+                border-top-right-radius: $border_card;
+            }
+        }
 
         & img {
             max-width: 100%;
@@ -97,16 +125,6 @@
             object-fit: cover;
             border-top-left-radius: $border_card;
             border-top-right-radius: $border_card;
-        }
-
-        &--new {
-            background-color: $tertiary-color;
-            color: darken($tertiary-color, $amount: 40);
-            border-radius: 0;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            padding: 5px 10px;
         }
 
         &--body {
@@ -123,10 +141,31 @@
 
             &-icon {
                 font-size: x-large;
+
+                right: 10px;
+
+
+                &-full {
+                    font-size: x-large;
+                    color: white;
+
+                    & :hover {
+                        display: flex;
+                        animation-name: redheart;
+                        animation-duration: 2s;
+
+                    }
+                }
+
+                & :hover {
+                    display: none;
+
+                }
             }
         }
     }
 }
+
 
 /*MEDIA QUERIES TABLETS*/
 
