@@ -23,8 +23,8 @@
 
         &--button {
             padding: 15px;
-            color: white;
-            background: linear-gradient(to bottom right, $secondary_color, 50%, $primary_color);
+            color: $white_color;
+            background: $gradient;
 
         }
     }
@@ -57,7 +57,7 @@
             width: 25px;
             height: 25px;
             border-radius: $border_round;
-            color: white;
+            color: $white_color;
             margin: -12px;
         }
 
@@ -66,6 +66,15 @@
             align-items: center;
             gap: 20px;
 
+        }
+
+        &:hover {
+            background-color: adjust-color($primary_color, $lightness: 30%, );
+            box-shadow: $shadow_big;
+
+            & i {
+                color: $primary_color;
+            }
         }
     }
 }
@@ -83,16 +92,16 @@
     gap: 30px;
 
     &__card {
-        background-color: $background_card;
-        min-width: 200px;
+        background-color: $white_color;
+        min-width: 230px;
         min-height: 200px;
         border-radius: $border_card;
         box-shadow: $shadow;
         position: relative;
 
         &--new {
-            background-color: $background_card;
-            min-width: 200px;
+            background-color: $white_color;
+            min-width: 230px;
             min-height: 200px;
             border-radius: $border_card;
             box-shadow: $shadow;
@@ -139,32 +148,38 @@
                 gap: 3px;
             }
 
-            &-icon {
-                font-size: x-large;
-
+            &-icon,
+            &-iconfull {
                 right: 10px;
+            }
 
+            &-icon {
+                font-size: 25px;
+                position: absolute;
 
-                &-full {
-                    font-size: x-large;
-                    color: white;
-
-                    & :hover {
-                        display: flex;
-                        animation-name: redheart;
-                        animation-duration: 2s;
-
-                    }
-                }
-
-                & :hover {
+                &:hover {
                     display: none;
-
                 }
             }
+
+            &-iconfull {
+                font-size: 27px;
+                color: transparent;
+                position: relative;
+                right: -1px;
+
+                &:hover {
+                    animation: redheart forwards;
+                    animation-duration: 3s;
+                }
+            }
+
+
+
         }
     }
 }
+
 
 
 /*MEDIA QUERIES TABLETS*/

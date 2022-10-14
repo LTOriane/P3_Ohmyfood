@@ -54,7 +54,7 @@
         min-height: 60px;
         padding: 8px 15px;
         border-radius: $border_details;
-        background-color: white;
+        background-color: $white_color;
 
         &--text h3 {
             padding: 3px 0px;
@@ -77,8 +77,8 @@
 
 .order {
     padding: 15px 30px;
-    background: linear-gradient(to bottom right, $secondary_color, 50%, $primary_color);
-    color: white;
+    background: $gradient;
+    color: $white_color;
 }
 
 .footer__menu {
