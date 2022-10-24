@@ -9,3 +9,16 @@
         opacity: 100%;
     }
 }
+
+@keyframes icons {
+    from {
+        font-size: 100%;
+        opacity: 50%;
+    }
+
+    to {
+        font-size: 180%;
+        opacity: 100%;
+        rotate: 360deg;
+    }
+}

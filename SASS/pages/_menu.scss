@@ -55,14 +55,56 @@
         padding: 8px 15px;
         border-radius: $border_details;
         background-color: $white_color;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: $tertiary_color;
+            border-top-right-radius: $border_details;
+            border-bottom-right-radius: $border_details;
+            transform: scaleX(0);
+            transition: transform 1s ease-in-out;
+            transform-origin: right;
+            z-index: -1;
+        }
+
+        &:focus::before {
+            transform: scaleX(0.18);
+        }
+
+        &:focus i {
+            display: block;
+            color: $white_color;
+            animation: icons forwards;
+            animation-duration: 3s;
+
+        }
+
+        &:focus .price {
+            transform: translateX(-220%);
+            transition: transform 1s ease-in-out;
+
+        }
 
         &--text h3 {
             padding: 3px 0px;
             font-size: 110%;
+
+        }
+
+        &--price i {
+            display: none;
         }
 
         &--price p {
             font-weight: 400;
+
         }
     }
 
@@ -97,7 +139,6 @@
 
         &__title {
             gap: 30px;
-
         }
 
         &__course {
