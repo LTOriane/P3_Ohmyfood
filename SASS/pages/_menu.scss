@@ -12,6 +12,7 @@
     border-top-right-radius: $border_menu;
     padding: 0px 15px 20px 15px;
 
+
     & h1 {
         font-family: 'Shrikhand', cursive;
     }
@@ -57,38 +58,38 @@
         background-color: $white_color;
         position: relative;
         z-index: 1;
+        animation: slidein 2s forwards;
 
-        &::before {
-            content: '';
+        &::after {
+            content: "";
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
-            left: 0;
             background: $tertiary_color;
             border-top-right-radius: $border_details;
             border-bottom-right-radius: $border_details;
-            transform: scaleX(0);
-            transition: transform 1s ease-in-out;
-            transform-origin: right;
             z-index: -1;
         }
 
-        &:focus::before {
-            transform: scaleX(0.18);
+        &:hover::after,
+        :focus-within::after {
+            animation: width 1.5s ease-in-out forwards;
         }
 
-        &:focus i {
+        &:hover i {
             display: block;
+            position: absolute;
+            font-size: 25px;
+            right: calc(9% - calc(25px/2));
+            bottom: calc(50% - calc(25px/2));
             color: $white_color;
-            animation: icons forwards;
-            animation-duration: 3s;
-
+            animation: icons 1.5s forwards;
         }
 
-        &:focus .price {
-            transform: translateX(-220%);
-            transition: transform 1s ease-in-out;
+        &:hover .price {
+            transform: translateX(-250%);
+            transition: transform 1.5s ease-in-out;
 
         }
 
@@ -104,6 +105,9 @@
 
         &--price p {
             font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
         }
     }
@@ -130,6 +134,20 @@
 
 /*MEDIA QUERIES FULL SCREEN*/
 
+@media screen and (min-width: 500px) and (max-width:800px) {
+    .menu__button:hover .price {
+        transform: translateX(-500%);
+        transition: transform 1.5s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width:999px) {
+    .menu__button:hover .price {
+        transform: translateX(-700%);
+        transition: transform 1.5s ease-in-out;
+    }
+}
+
 @media screen and (min-width: 1000px) {
 
     .menu {
@@ -148,6 +166,11 @@
 
         &__details {
             min-width: 500px;
+        }
+
+        &__button:hover .price {
+            transform: translateX(-400%);
+            transition: transform 1.5s ease-in-out;
         }
     }
 }

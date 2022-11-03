@@ -148,34 +148,27 @@
                 gap: 3px;
             }
 
-            &-icon,
-            &-iconfull {
+            &-icons {
                 right: 10px;
-            }
-
-            &-icon {
                 font-size: 25px;
-                position: absolute;
+                position: relative;
+                display: flex;
 
-                &:hover {
+                &-full {
+                    display: none;
+                    position: absolute;
+                }
+
+                &-full:hover,
+                :focus-within {
+                    animation: redheart 1.5s ease-out forwards;
+                }
+
+                &-empty:hover,
+                :focus-within {
                     display: none;
                 }
             }
-
-            &-iconfull {
-                font-size: 27px;
-                color: transparent;
-                position: relative;
-                right: -1px;
-
-                &:hover {
-                    animation: redheart forwards;
-                    animation-duration: 3s;
-                }
-            }
-
-
-
         }
     }
 }

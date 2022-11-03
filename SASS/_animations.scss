@@ -1,24 +1,48 @@
 @keyframes redheart {
     from {
-        color: $white_color;
-        opacity: 100%;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0%;
     }
 
     to {
-        color: $secondary_color;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         opacity: 100%;
+    }
+}
+
+@keyframes width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 18%;
     }
 }
 
 @keyframes icons {
     from {
         font-size: 100%;
-        opacity: 50%;
     }
 
     to {
         font-size: 180%;
-        opacity: 100%;
         rotate: 360deg;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 5%;
+        opacity: 0%;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 100%;
     }
 }
