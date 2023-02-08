@@ -93,16 +93,16 @@
 
     &__card {
         background-color: $white_color;
-        min-width: 230px;
-        min-height: 200px;
+        max-width: 400px;
+        height: 250px;
         border-radius: $border_card;
         box-shadow: $shadow;
         position: relative;
 
         &--new {
             background-color: $white_color;
-            min-width: 230px;
-            min-height: 200px;
+            max-width: 400px;
+            height: 250px;
             border-radius: $border_card;
             box-shadow: $shadow;
             position: relative;
@@ -120,8 +120,8 @@
 
 
             & img {
-                max-width: 100%;
-                max-height: 80%;
+                width: 100%;
+                height: 70%;
                 object-fit: cover;
                 border-top-left-radius: $border_card;
                 border-top-right-radius: $border_card;
@@ -129,14 +129,15 @@
         }
 
         & img {
-            max-width: 100%;
-            max-height: 80%;
+            width: 100%;
+            height: 70%;
             object-fit: cover;
             border-top-left-radius: $border_card;
             border-top-right-radius: $border_card;
         }
 
         &--body {
+            height: 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -181,13 +182,14 @@
 
 /*MEDIA QUERIES TABLETS*/
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 440px) {
 
     .howto {
         align-items: center;
 
         &__button {
             min-width: 400px;
+            min-height: 25px;
         }
     }
 
@@ -201,34 +203,51 @@
         flex-wrap: wrap;
         justify-content: center;
 
-        &__card {
-            max-width: 300px;
-            min-height: 450px;
+    }
 
-            & img {
-                width: 100%;
-                height: 80%;
-                object-fit: cover;
+
+}
+
+
+
+@media screen and (min-width: 440px) and (max-width:1299px) {
+    .restaurant {
+        &__card {
+            min-width: 400px;
+            height: 250px;
+
+            &--new {
+                min-width: 400px;
+                height: 250px;
             }
+
         }
     }
 }
 
+
 /*MEDIA QUERIES FULL SCREEN*/
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1300px) {
 
     .restaurant {
         flex-wrap: nowrap;
 
         &__card {
-            min-width: 220px;
+            width: 300px;
+            height: 400px;
+
+            &--new {
+                width: 300px;
+                height: 400px;
+
+                & img {
+                    height: 80%;
+                }
+            }
 
             & img {
-                width: 100%;
                 height: 80%;
-                object-fit: cover;
-
             }
         }
     }
