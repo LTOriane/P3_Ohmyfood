@@ -18,10 +18,10 @@
     }
 
     &__title {
+        padding: 15px 15px 0px 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 15px 0px 15px;
 
         & i {
             font-size: 150%;
@@ -32,33 +32,33 @@
         text-transform: uppercase;
         font-size: 80%;
         padding: 20px 0px 5px 0px;
-        border-bottom: 3px $tertiary_color solid;
+        border-bottom: $tertiary_color 3px solid;
         width: 45px;
 
-        & h2 {
+        &h2 {
             font-weight: 200;
         }
     }
 
     &__details {
-        padding: 15px 0px 15px 0px;
         display: flex;
         flex-direction: column;
         gap: 15px;
+        padding: 15px 0px;
     }
 
     &__button {
+        max-width: 450px;
         display: flex;
-        align-items: flex-end;
-        text-align: left;
         justify-content: space-between;
-        min-height: 60px;
-        padding: 8px 15px;
+        align-items: center;
+        text-align: left;
+        padding: 10px 15px;
         border-radius: $border_details;
         background-color: $white_color;
-        position: relative;
-        z-index: 1;
         animation: slidein 2s forwards;
+        z-index: 1;
+        position: relative;
 
         &::after {
             content: "";
@@ -66,7 +66,7 @@
             top: 0;
             bottom: 0;
             right: 0;
-            background: $tertiary_color;
+            background-color: $tertiary_color;
             border-top-right-radius: $border_details;
             border-bottom-right-radius: $border_details;
             z-index: -1;
@@ -74,41 +74,34 @@
 
         &:hover::after,
         :focus-within::after {
-            animation: width 1.5s ease-in-out forwards;
+            animation: width 1.2s ease-in forwards;
         }
 
         &:hover i {
             display: block;
             position: absolute;
             font-size: 25px;
-            right: calc(9% - calc(25px/2));
             bottom: calc(50% - calc(25px/2));
             color: $white_color;
-            animation: icons 1.5s forwards;
+            animation: icons 1.2s ease-in forwards;
+            z-index: 0;
+            overflow: hidden;
         }
 
         &:hover .price {
-            transform: translateX(-250%);
-            transition: transform 1.5s ease-in-out;
+            transform: translateX(-50px);
+            transition: transform 1.2s ease-in;
 
         }
 
-        &--text h3 {
-            padding: 3px 0px;
-            font-size: 110%;
-
-        }
-
-        &--price i {
-            display: none;
-        }
-
-        &--price p {
-            font-weight: 400;
-            white-space: nowrap;
-            overflow: hidden;
+        &--text {
             text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
 
+        & i {
+            display: none;
         }
     }
 
@@ -134,21 +127,7 @@
 
 /*MEDIA QUERIES FULL SCREEN*/
 
-@media screen and (min-width: 500px) and (max-width:800px) {
-    .menu__button:hover .price {
-        transform: translateX(-500%);
-        transition: transform 1.5s ease-in-out;
-    }
-}
-
-@media screen and (min-width: 801px) and (max-width:999px) {
-    .menu__button:hover .price {
-        transform: translateX(-700%);
-        transition: transform 1.5s ease-in-out;
-    }
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 479px) {
 
     .menu {
         display: flex;
@@ -164,13 +143,9 @@
             width: auto;
         }
 
-        &__details {
-            min-width: 500px;
-        }
-
-        &__button:hover .price {
-            transform: translateX(-400%);
-            transition: transform 1.5s ease-in-out;
+        &__button {
+            min-width: 450px;
+            overflow: hidden;
         }
     }
 }

@@ -20,18 +20,30 @@
     }
 
     to {
-        width: 18%;
+        width: 50px;
     }
 }
 
 @keyframes icons {
     from {
+        right: calc(-50px - calc(25px/2));
         font-size: 100%;
     }
 
     to {
+        right: calc(25px - calc(25px/2));
         font-size: 180%;
         rotate: 360deg;
+    }
+}
+
+@keyframes scale {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 100%;
     }
 }
 
