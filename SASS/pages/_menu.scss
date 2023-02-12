@@ -1,6 +1,6 @@
 .background img {
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     position: absolute;
 }
 
@@ -57,8 +57,9 @@
         border-radius: $border_details;
         background-color: $white_color;
         animation: slidein 2s forwards;
-        z-index: 1;
+        z-index: 0;
         position: relative;
+
 
         &::after {
             content: "";
@@ -72,12 +73,11 @@
             z-index: -1;
         }
 
-        &:hover::after,
-        :focus-within::after {
+        &:focus-within::after {
             animation: width 1.2s ease-in forwards;
         }
 
-        &:hover i {
+        &:focus-within i {
             display: block;
             position: absolute;
             font-size: 25px;
@@ -88,16 +88,22 @@
             overflow: hidden;
         }
 
-        &:hover .price {
+        &:focus-within .price {
             transform: translateX(-50px);
             transition: transform 1.2s ease-in;
 
         }
 
+        &:focus-within .menu__button--text {
+            animation: slidetext 1.2s ease-in forwards;
+        }
+
         &--text {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            width: 85%;
+        }
+
+        &--price p {
+            font-weight: 700;
         }
 
         & i {

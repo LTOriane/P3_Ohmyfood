@@ -54,6 +54,14 @@ h4 {
 
 p {
     font-weight: 300;
+
+}
+
+p,
+h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 input {

@@ -1,8 +1,14 @@
 .loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
+    background-color: $white_color;
+    animation: fadein 8s cubic-bezier(.96, .07, .98, .74) forwards;
 
     & img {
         width: 250px;
@@ -18,12 +24,14 @@
             background-size: 100% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: block;
         }
 
         &--icone1,
         &--icone2,
         &--icone3 {
-            animation: roundheart 5s ease-in-out forwards 2;
+            animation: roundheart 3s ease-in-out forwards 2;
+            animation-delay: 0s;
         }
 
         &--icone2 {

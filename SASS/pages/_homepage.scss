@@ -27,6 +27,12 @@
             background: $gradient;
 
         }
+
+        & p {
+            overflow: visible;
+            white-space: normal;
+        }
+
     }
 }
 
