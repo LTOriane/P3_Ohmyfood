@@ -1,0 +1,80 @@
+@keyframes redheart {
+    from {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0%;
+    }
+
+    to {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 100%;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 5%;
+        opacity: 0%;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 100%;
+    }
+}
+
+@keyframes width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50px;
+    }
+}
+
+@keyframes icons {
+    from {
+        right: calc(-50px - calc(25px/2));
+        font-size: 100%;
+    }
+
+    to {
+        right: calc(25px - calc(25px/2));
+        font-size: 180%;
+        rotate: 360deg;
+    }
+}
+
+@keyframes roundheart {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes slidetext {
+    0% {
+        width: 85%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
