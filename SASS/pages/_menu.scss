@@ -55,11 +55,12 @@
         text-align: left;
         padding: 10px 15px;
         border-radius: $border_details;
+        box-shadow: $shadow;
         background-color: $white_color;
+        position: relative;
+        font-size: 90%;
         animation: slidein 2s forwards;
         z-index: 0;
-        position: relative;
-
 
         &::after {
             content: "";
@@ -70,31 +71,30 @@
             background-color: $tertiary_color;
             border-top-right-radius: $border_details;
             border-bottom-right-radius: $border_details;
-            z-index: -1;
+            z-index: 1;
         }
 
-        &:focus-within::after {
+        &:hover::after {
             animation: width 1.2s ease-in forwards;
         }
 
-        &:focus-within i {
+        &:hover i {
             display: block;
             position: absolute;
             font-size: 25px;
             bottom: calc(50% - calc(25px/2));
             color: $white_color;
             animation: icons 1.2s ease-in forwards;
-            z-index: 0;
+            z-index: 2;
             overflow: hidden;
         }
 
-        &:focus-within .price {
+        &:hover .price {
             transform: translateX(-50px);
             transition: transform 1.2s ease-in;
-
         }
 
-        &:focus-within .menu__button--text {
+        &:hover .menu__button--text {
             animation: slidetext 1.2s ease-in forwards;
         }
 

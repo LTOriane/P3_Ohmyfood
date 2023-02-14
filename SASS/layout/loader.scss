@@ -8,7 +8,8 @@
     justify-content: center;
     gap: 20px;
     background-color: $white_color;
-    animation: fadein 8s cubic-bezier(.96, .07, .98, .74) forwards;
+    animation: fadein 3s cubic-bezier(1, -0.01, .99, .81) forwards;
+    z-index: 100;
 
     & img {
         width: 250px;
@@ -30,7 +31,7 @@
         &--icone1,
         &--icone2,
         &--icone3 {
-            animation: roundheart 3s ease-in-out forwards 2;
+            animation: roundheart 1.5s ease-in-out forwards 2;
             animation-delay: 0s;
         }
 
