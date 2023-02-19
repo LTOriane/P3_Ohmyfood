@@ -15,3 +15,4 @@ $border_menu:40px;
 $border_details:14px;
 $shadow: 1px 1px 12px adjust-color($grey_color, $lightness: 60%, );
 $shadow_big:1px 1px 16px adjust-color($grey_color, $lightness: 60%, );
+$shadow_in:inset 0 6px 4px -4px adjust-color($grey_color, $lightness: 50%, )

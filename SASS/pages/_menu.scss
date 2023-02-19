@@ -10,7 +10,7 @@
     background-color: adjust-color($grey_color, $lightness: 75%, );
     border-top-left-radius: $border_menu;
     border-top-right-radius: $border_menu;
-    padding: 0px 15px 20px 15px;
+    padding: 0px 15px 20px;
 
 
     & h1 {
@@ -18,7 +18,7 @@
     }
 
     &__title {
-        padding: 15px 15px 0px 15px;
+        padding: 15px 15px 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -31,7 +31,7 @@
     &__course {
         text-transform: uppercase;
         font-size: 80%;
-        padding: 20px 0px 5px 0px;
+        padding: 20px 0px 5px;
         border-bottom: $tertiary_color 3px solid;
         width: 45px;
 
